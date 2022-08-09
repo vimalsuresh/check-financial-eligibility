@@ -4,7 +4,7 @@ module TestCase
   # and instantiate them as a TestCase::Workbook object, making each available through a .each method
   #
   class GroupRunner
-    DATA_DIR = Rails.root.join("tmp/integration_test_data")
+    DATA_DIR = Rails.root.join("testData/integration_test_data")
     MASTER_SHEET = "AAA - CFE Integration Test master spreadsheet".freeze
 
     def initialize(verbosity_level, refresh)
@@ -68,10 +68,10 @@ module TestCase
       {
         type: "service_account",
         project_id: "laa-apply-for-legal-aid",
-        private_key_id: Rails.configuration.x.google_sheets.private_key_id,
-        private_key: Rails.configuration.x.google_sheets.private_key,
-        client_email: Rails.configuration.x.google_sheets.client_email,
-        client_id: Rails.configuration.x.google_sheets.client_id,
+        private_key_id: Rails.configuration.x.private_key_id,
+        private_key: Rails.configuration.x.private_key,
+        client_email: Rails.configuration.x.client_email,
+        client_id: Rails.configuration.x.client_id,
         auth_uri: "https://accounts.google.com/o/oauth2/auth",
         token_uri: "https://oauth2.googleapis.com/token",
         auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
