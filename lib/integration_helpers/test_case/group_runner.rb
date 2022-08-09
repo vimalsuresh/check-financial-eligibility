@@ -2,7 +2,7 @@ module TestCase
   # Class to load the AAA - CFE Integration Test master spreadsheet (downloading it again if
   # the remote version is more up to date), and then open each of the spreadsheets listed in turn
   # and instantiate them as a TestCase::Workbook object, making each available through a .each method
-  #
+  ##
   class GroupRunner
     DATA_DIR = Rails.root.join("testData/integration_test_data")
     MASTER_SHEET = "AAA - CFE Integration Test master spreadsheet".freeze
